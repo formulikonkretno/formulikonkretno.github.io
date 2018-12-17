@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Электромагнетизм</title><link rel="shortcut icon" href="favicon.ico">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body bgcolor="white"  link="white" vlink="black" alink="red">
+<style type="text/css">
+	* {box-sizing: border-box;}
+body {font-family: Arial;}
+.spoiler_contaier {width: 100%; margin: 50px auto;}
+.spoiler {background: white; border-radius: 30px; margin-bottom: 10px;}
+.spoiler_links {position: relative; display: block; padding: 16px 0 18px 28px; margin-bottom: 5px; background: #000; color: #fff; border-radius: 30px; text-decoration: none;}
+.spoiler_links .plus_minus {position: absolute; width: 42px; height: 42px; line-height: 45px; border-radius: 100%; right: 6px; top: 50%; margin-top: -21px; background: blue; text-align: center; display: block;}
+.spoler_body {display: none; background: white; border-bottom: 6px solid blue; padding: 15px 20px; margin-bottom: 5px;}
+.spoiler_contaier2 {width: 100%; margin: 50px auto;}
+.spoiler2 {background: grey; border-radius: 30px; margin-bottom: 10px;}
+.spoiler_links2 {position: relative; display: block; padding: 16px 0 18px 28px; margin-bottom: 5px; background: #000; color: orange; border-radius: 30px; text-decoration: none;}
+.spoiler_links .plus_minus2 {position: absolute; width: 42px; height: 42px; line-height: 45px; border-radius: 100%; right: 6px; top: 50%; margin-top: -21px; background: red; text-align: center; display: block;}
+.spoler_body2 {display: none; background: white; border-bottom: 6px solid orange; padding: 15px 20px; margin-bottom: 5px;}
+p {font-size: 18px;
+	text-align: center;}
+
+.header {background: orange; width: 30%; font-size: 60px; margin: 50px auto; border-radius: 30px}
+</style>
+   <div class="header" align="center"><a href="index.html" mce_href="/index.html" >Назад</a></div>
+
+<div class="spoiler_contaier">
+    <div class="spoiler">
+       <a href="" class="spoiler_links">Диполь<span class="plus_minus">+</span></a>
+       <div class="spoler_body">
+       	  <div class="spoiler_contaier2">
+    <div class="spoiler2">
+       <a href="" class="spoiler_links2">Сила<span class="plus_minus2">+</span></a>
+       <div class="spoler_body2">
+       	  <p>Уровень сложности: <q>Подробный вывод формулы не предусмотрен настоящим курсом физики...</q></p>
+          <IMG src="logotip.jpg">
+       </div>
+    </div>
+    <div class="spoiler2">
+       <a href="" class="spoiler_links2">Энергия взаимодействия<span class="plus_minus2">+</span></a>
+       <div class="spoler_body2">
+       	  <p>Уровень сложности: <q>Очевидно...</q></p>
+          <IMG src="img/evz.jpg">
+
+       			</div>
+    		</div>
+		</div>
+       </div>
+    </div>
+    	<div class="spoiler">
+       		<a href="" class="spoiler_links">Энергия взаимодействия<span class="plus_minus">+</span></a>
+       		<div class="spoler_body">
+       	  	<p>Уровень сложности: <q>Очевидно...</q></p>
+          		<IMG src="img/evz.jpg">
+          <p>Примечане:Каждый из потеницалов является результирующим потенциалом поля окружающих зарядов</p>
+       		</div>
+    	</div>
+    	 <div class="spoiler">
+       <a href="" class="spoiler_links">Конденсаторы<span class="plus_minus">+</span></a>
+       <div class="spoler_body">
+       	  <div class="spoiler_contaier2">
+    <div class="spoiler2">
+       <a href="" class="spoiler_links2">Параллельное соединение<span class="plus_minus2">+</span></a>
+       <div class="spoler_body2">
+       	  <p>Уровень сложности: <q>Очевидно...</q></p>
+          <IMG src="img/parsc.jpg">
+          <p>Примечане:При параллельном соединении U=const</p>
+       </div>
+    </div>
+    <div class="spoiler2">
+       <a href="" class="spoiler_links2">Последовательное соединение<span class="plus_minus2">+</span></a>
+       <div class="spoler_body2">
+       	  <p>Уровень сложности: <q>Очевидно...</q></p>
+          <IMG src="img/possc.jpg">
+          <p>Примечане:При последовательном соединении I=const, а значит q=const</p>
+       			</div>
+    		</div>
+		</div>
+       </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+   $('.spoiler_links').click(function(){
+      if ($(this).parent().children('div.spoler_body').css("display")=="none") {
+         $("div[class^='spoler_body']").hide('normal');
+         $(this).parent().children('div.spoler_body').toggle('normal');
+         $('div[class^="spoler_body"]').closest('.spoiler').find('.plus_minus').html("+");
+         $(this).closest('.spoiler').find('.plus_minus').html("-");
+      }
+      else {
+         $("div[class^='spoler_body']").hide('normal');
+         $(this).closest('.spoiler').find('.plus_minus').html("+");
+      }
+      return false;
+   });
+});
+	$(document).ready(function(){
+   $('.spoiler_links2').click(function(){
+      if ($(this).parent().children('div.spoler_body2').css("display")=="none") {
+         $("div[class^='spoler_body2']").hide('normal');
+         $(this).parent().children('div.spoler_body2').toggle('normal');
+         $('div[class^="spoler_body2"]').closest('.spoiler2').find('.plus_minus2').html("+");
+         $(this).closest('.spoiler2').find('.plus_minus2').html("-");
+      }
+      else {
+         $("div[class^='spoler_body2']").hide('normal');
+         $(this).closest('.spoiler2').find('.plus_minus2').html("+");
+      }
+      return false;
+   });
+});
+</script>
+
+
+</body>
+</html>
